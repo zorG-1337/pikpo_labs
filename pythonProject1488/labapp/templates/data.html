@@ -1,0 +1,50 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+    <article>
+        <table align="center">
+            <tr>
+                <th>Текущий статус</th>
+                <th>Пол</th>
+                <th>Возврастная группа</th>
+                <th>Раса</th>
+                <th>Статус госпитализации</th>
+                <th>Статус поступления в отделение инт. терапии</th>
+                <th>Статус смерти</th>
+                <th>Наличие заболевания или патологии</th>
+            </tr>
+            <tbody>
+            {% for row in processed_data %}
+                <tr>
+                    <td>
+                        {{row[1]}}
+                    </td>
+                    <td>
+                        {{row[2]}}
+                    </td>
+                    <td>
+                        {{row[3]}}
+                    </td>
+                    <td>
+                        {{row[4]}}
+                    </td>
+                    <td>
+                        {{row[5]}}
+                    </td>
+                    <td>
+                        {{row[6]}}
+                    </td>
+                    <td>
+                        {{row[7]}}
+                    </td>
+                    <td>
+                        {{row[8]}}
+                    </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </article>
+
+{% endblock %}
